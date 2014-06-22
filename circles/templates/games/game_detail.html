@@ -1,0 +1,90 @@
+<html>
+<head>
+  <link rel="stylesheet" href="{{STATIC_URL}}flow.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> 
+  <script>
+    $(document).ready(function() {
+      $( ".showme_off" ).click(function() {
+        $( ".play_on" ).hide();
+        $( ".showme_on" ).show();
+        $( ".showme_off" ).hide();
+        $( ".play_off" ).show();
+      });
+      $( ".play_off" ).click(function() {
+        $( ".play_off" ).hide();
+        $( ".showme_off" ).show();
+        $( ".showme_on" ).hide();
+        $( ".play_on" ).show();
+      });
+
+      //flow
+      var sequence = new Array(7);
+      $( ".selector" ).draggable({
+        revert: true,
+        cursor: 'move',
+        drag: function () { 
+        }
+      });
+      $( ".circle" ).droppable({
+        drop: function (event, ui) {
+          var pos = $(this).attr('class').split(' ')[1];
+          var selector = $(ui.draggable);
+          var selector_color = selector.css("background-color");
+          var circle_color = $(this).css("background-color");
+          var exists_color = jQuery.inArray(selector_color, sequence);
+
+          if (exists_color > -1) { //existe
+            var pos_existing_color = sequence.indexOf(selector_color);
+            var circle_with_current_color = $( "." + pos_existing_color);
+            //removing existing color
+            delete sequence[pos_existing_color];
+            //sequence.remove(pos_existing_color);
+            circle_with_current_color.css("background-color", "rgba(0, 0, 0, 0)");
+          }
+          $(this).css("background-color", selector_color);
+          sequence[pos] = selector_color;
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="flow">
+  <div class="options">
+    <div class="play_on">
+      <div class="current_state play">PLAY</div>
+      <div class="playled led">ON</div>
+    </div>
+    <div class="showme_on" hidden="true">
+      <div class="current_state showme">SHOW ME 1 SEQUENCE</div>
+      <div class="showme_led led">ON</div>
+    </div>
+    <div class="showme_off state_off">SHOW ME A SECUENCE</div>
+    <div class="play_off state_off" hidden="true">PLAY</div>
+  </div>
+  <div class="sequence-wrapper">
+    <div class="circle 0"></div>
+    <div class="circle 1"></div>
+    <div class="circle 2"></div>
+    <div class="circle 3"></div>
+    <div class="circle 4"></div>
+    <div class="circle 5"></div>
+    <div class="circle 6" style="margin-right: -6px;"></div>
+  </div>
+  <div class="selectors-wrapper">
+    {% for color in object.available_colors %}
+    <div class="selector" style="background-color: #{{ color.hex_code }}"></div>
+    {% endfor %}
+  </div>
+  <div class="go-wrapper">
+    <form action="." method="post">
+      <input type="email" class="paypal" placeholder="PayPal account: to receive your prize">
+      <input type="submit" class="go" value="GO">
+    </form>
+  </div>
+</div>
+</body>
+</html>
