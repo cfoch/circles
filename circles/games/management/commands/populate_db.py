@@ -14,7 +14,7 @@ class Command(BaseCommand):
     help = 'our help string comes here'
 
     def _create_colors(self):
-        print "Populating Colors"
+        print("Populating Colors")
         light_colors = (
             {"color":Color.RED,     "hex_code":"FF4D00"},
             {"color":Color.ORANGE,  "hex_code":"FF9A00"},
@@ -38,15 +38,15 @@ class Command(BaseCommand):
         for info in dark_colors:
             color = Color(color=info["color"], hex_code=info["hex_code"], tonality=Color.DARK)
             color.save()
-        print "SUCCESS"
+        print("SUCCESS")
 
     def _create_games(self, n=1):
         if Color.objects.count() < Game.AVAILABLE_COLORS:
-            print "Impossible to create games. No enough colors."
-            print "ESCAPING..."
+            print("Impossible to create games. No enough colors.")
+            print("ESCAPING...")
             return
 
-        print "Populating Games"
+        print("Populating Games")
         for i in range(n):
             available_colors = Color.objects.all().order_by('?')[:Game.AVAILABLE_COLORS]
 
@@ -58,11 +58,11 @@ class Command(BaseCommand):
             game.end_date = game.start_date + datetime.timedelta(days=random.randint(3, 30))
             game.save()
             game.available_colors.add(*available_colors)
-        print "SUCCESS"
+        print("SUCCESS")
 
 
     def _create_players(self, n_requested_players):
-        print "Populating players"
+        print("Populating players")
         emails_fname = "games/management/commands/data/emails.txt"
         with open(emails_fname) as f:
             emails = f.read().splitlines()
@@ -95,7 +95,7 @@ class Command(BaseCommand):
 
             player.save()
             print("Registering %d of %d players" % (player_n + 1, n_requested_players))
-        print "SUCCESS"
+        print("SUCCESS")
 
     def _create_sequence(self):
         """
