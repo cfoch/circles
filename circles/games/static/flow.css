@@ -55,6 +55,7 @@ div.go-wrapper {
 input.paypal {
   float:left;
   border: 1px solid #426382;
+  border-right: 0px solid #426382;
   padding-left: 13px;
   padding-right: 13px; 
   width: 300px;
@@ -101,7 +102,9 @@ div.play {
 div.showme {
   background-color: #ff5e00;
   border-color: #ff5e00; 
-  width: 200px; 
+  width: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 
@@ -167,4 +170,33 @@ div.showme_off {
 
 form.go_form {
   float: right; 
+}
+
+div.counter {
+  background-color: #ff5e00;
+  border-color: #ff5e00;
+  height: 34px;
+  line-height: 34px;
+  padding-right: 10px;
+  width: auto;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  font-family: 'Open Sans', sans-serif;
+  color: #FFFFFF;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+div.price {
+  float:left;
+  border-top: 1px solid #426382;
+  border-bottom: 1px solid #426382;  
+  padding-left: 13px;
+  padding-right: 13px; 
+  width: 100px;
+  height: 32px;
+  line-height: 34px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
 }

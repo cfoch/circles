@@ -7,17 +7,60 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> 
   <script>
     $(document).ready(function() {
+      var sequence = new Array(7);
+      var showme_n = 1; //cantidad de sequences a mostrar
+
+      /*
+      $(".go_form").submit(function( event ) {
+        event.preventDefault();
+        var paypal = $(".paypal").val();
+        var jqxhr = $.ajax({
+          url: "http://circleghost-68527.sae1.nitrousbox.com:8888/players/create/",
+          type: "POST",
+          headers: {
+            'X-CSRF-Token': '<%= form_authenticity_token.to_s %>'
+          },
+          data: {paypal: paypal, sequence: sequence, game: '<%= @game.id %>'}
+        });
+          alert('{paypal: paypal, sequence: sequence, game: <%= @game.id %>}');
+
+      });
+      */
+
+      //botones
       $( ".showme_off" ).click(function() {
         $( ".play_on" ).hide();
         $( ".showme_on" ).show();
         $( ".showme_off" ).hide();
         $( ".play_off" ).show();
+        $( ".selectors-wrapper").hide();
+        $( ".price").show();
       });
       $( ".play_off" ).click(function() {
         $( ".play_off" ).hide();
         $( ".showme_off" ).show();
         $( ".showme_on" ).hide();
         $( ".play_on" ).show();
+        $( ".selectors-wrapper").show();
+        $( ".price").hide();
+      });
+
+      //counter
+      $( "#counter_down" ).click(function() {
+        showme_n--;
+        $('#showme_n').empty();
+        if ((showme_n == 0) || (showme_n == 1)){
+          if (showme_n == 0) { showme_n++ };
+          $('#showme_n').append('SHOW ME ' + showme_n + ' SEQUENCE');
+        }
+        else {
+          $('#showme_n').append('SHOW ME ' + showme_n + ' SEQUENCES');
+        }
+      });
+      $( "#counter_up" ).click(function() {
+        showme_n++;
+        $('#showme_n').empty();
+        $('#showme_n').append('SHOW ME ' + showme_n + ' SEQUENCES');
       });
 
       //flow
@@ -59,7 +102,9 @@
       <div class="playled led">ON</div>
     </div>
     <div class="showme_on" hidden="true">
-      <div class="current_state showme">SHOW ME 1 SEQUENCE</div>
+      <div id="showme_n" class="current_state showme">SHOW ME 1 SEQUENCE </div>
+      <div id="counter_down" class="counter">-</div>
+      <div id="counter_up" class="counter">+</div>
       <div class="showme_led led">ON</div>
     </div>
     <div class="showme_off state_off">SHOW ME A SECUENCE</div>
@@ -75,13 +120,14 @@
     <div class="circle 6" style="margin-right: -6px;"></div>
   </div>
   <div class="selectors-wrapper">
-    {% for color in object.available_colors %}
+    {% for color in object.available_colors.all %}
     <div class="selector" style="background-color: #{{ color.hex_code }}"></div>
     {% endfor %}
   </div>
   <div class="go-wrapper">
     <form action="." method="post">
       <input type="email" class="paypal" placeholder="PayPal account: to receive your prize">
+      <div class="price" hidden="true">Total: $0.03</div>
       <input type="submit" class="go" value="GO">
     </form>
   </div>

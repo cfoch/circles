@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 
 class Color(models.Model):
@@ -68,6 +70,11 @@ class Game(models.Model):
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
     available_colors = models.ManyToManyField("Color")
+
+    def is_available(self):
+        now = datetime.datetime.now()
+        return (now >= self.start_date) and (now <= self.end_date)
+
 """
     def clean(self):
         if self.available_colors.count() != self.AVAILABLE_COLORS:
