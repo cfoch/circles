@@ -6,6 +6,7 @@ from django.core.management.base import BaseCommand
 from django.core.management import call_command
 from django.utils import timezone
 
+from factors.models import FactorFunction
 from games.models import Color, Game, Sequence, Player, Payment
 
 
@@ -49,6 +50,7 @@ class Command(BaseCommand):
         print("Populating Games")
         for i in range(n):
             available_colors = Color.objects.all().order_by('?')[:Game.AVAILABLE_COLORS]
+            factors = self._select_random_factors()
 
             game = Game()
             game.initial_amount = random.randint(0, 100)
@@ -58,8 +60,14 @@ class Command(BaseCommand):
             game.end_date = game.start_date + datetime.timedelta(days=random.randint(3, 30))
             game.save()
             game.available_colors.add(*available_colors)
+            game.factors.add(*factors)
+            
         print("SUCCESS")
 
+    def _select_random_factors(self):
+        n_random = random.randint(0, FactorFunction.objects.all().count())
+        factors = FactorFunction.objects.all().order_by('?')[:n_random]
+        return factors
 
     def _create_players(self, n_requested_players):
         print("Populating players")
@@ -129,6 +137,7 @@ class Command(BaseCommand):
         if os.path.exists(db_file):
             os.remove(db_file)
         call_command('syncdb', interactive=True)
+        call_command('update_factors')
         
 
     def handle(self, *args, **options):

@@ -59,21 +59,27 @@ class Payment(models.Model):
 
 class Game(models.Model):
     AVAILABLE_COLORS = 7
+    MAX_DISCOUNT = 0.25
 
-    sequences = models.ManyToManyField("Sequence", null=True)
+    sequences = models.ManyToManyField("Sequence", null=True, blank=True)
     initial_amount = models.IntegerField()
     percentage = models.IntegerField()
-    prize = models.DecimalField(max_digits=8, decimal_places=2, null=True)
+    prize = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True)
     # Payment to see a sequence
     payment = models.DecimalField(max_digits=8, decimal_places=2)
-    winner_sequence = models.OneToOneField("Sequence", related_name="+", null=True)
+    winner_sequence = models.OneToOneField("Sequence", related_name="+", null=True, blank=True)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
     available_colors = models.ManyToManyField("Color")
+    factors = models.ManyToManyField("factors.FactorFunction", null=True, blank=True)
+    max_discount = models.DecimalField(max_digits=3, decimal_places=2, default=MAX_DISCOUNT)
 
     def is_available(self):
         now = datetime.datetime.now()
         return (now >= self.start_date) and (now <= self.end_date)
+
+    def __unicode__(self):
+        return str(self.pk)
 
 """
     def clean(self):
