@@ -46,6 +46,32 @@
       });
 
       //counter
+      function show_payment(n_seq) {
+        var payment;
+        $.ajax({
+            type: "post",
+            url: "http://127.0.0.1:8000/games/get_payment/",
+            data: {game: {{ game.pk }}, n: n_seq} ,
+            success: function (data) {
+              $( ".price").html( 'Total: $' + data['payment'] );
+            },
+            error:function(x,e){
+                if(x.status==0){
+                    alert('You are offline!!\n Please Check Your Network.');
+                }else if(x.status==404){
+                    alert('Requested URL not found.');
+                }else if(x.status==500){
+                    alert('Internel Server Error.');
+                }else if(e=='parsererror'){
+                    alert('Error.\nParsing JSON Request failed.');
+                }else if(e=='timeout'){
+                    alert('Request Time out.');
+                }else {
+                    alert('Unknow Error.\n'+x.responseText);
+                }
+            }
+        });
+      }
       $( "#counter_down" ).click(function() {
         showme_n--;
         $('#showme_n').empty();
@@ -56,11 +82,13 @@
         else {
           $('#showme_n').append('SHOW ME ' + showme_n + ' SEQUENCES');
         }
+        show_payment(showme_n);
       });
       $( "#counter_up" ).click(function() {
         showme_n++;
         $('#showme_n').empty();
         $('#showme_n').append('SHOW ME ' + showme_n + ' SEQUENCES');
+        show_payment(showme_n);
       });
 
       //flow
@@ -120,14 +148,14 @@
     <div class="circle 6" style="margin-right: -6px;"></div>
   </div>
   <div class="selectors-wrapper">
-    {% for color in object.available_colors.all %}
+    {% for color in game.available_colors.all %}
     <div class="selector" style="background-color: #{{ color.hex_code }}"></div>
     {% endfor %}
   </div>
   <div class="go-wrapper">
     <form action="." method="post">
       <input type="email" class="paypal" placeholder="PayPal account: to receive your prize">
-      <div class="price" hidden="true">Total: $0.03</div>
+      <div class="price" hidden="true">Total: ${{ game.payment }}</div>
       <input type="submit" class="go" value="GO">
     </form>
   </div>

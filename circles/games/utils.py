@@ -42,8 +42,8 @@ class PaymentCalculator:
         return self._to_decimal(self.base_payment * self.n_sequences)
 
     def _average_factor(self):
-        if self.factors is None:
-            return
+        if self.n_sequences == 1:
+            return 1.0
         total_weight = 0
         suma = 0
         for factor in self.factors:
