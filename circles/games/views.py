@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt
 
+# FIXME it is deprecated
 from django.utils import simplejson
 
 
@@ -35,5 +36,3 @@ def get_payment(request):
     info = {'payment': float(calculator.get_price())}
     data = simplejson.dumps(info)
     return HttpResponse(data, mimetype='application/json')
-
-    

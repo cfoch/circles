@@ -10,22 +10,10 @@
       var sequence = new Array(7);
       var showme_n = 1; //cantidad de sequences a mostrar
 
-      /*
-      $(".go_form").submit(function( event ) {
-        event.preventDefault();
-        var paypal = $(".paypal").val();
-        var jqxhr = $.ajax({
-          url: "http://circleghost-68527.sae1.nitrousbox.com:8888/players/create/",
-          type: "POST",
-          headers: {
-            'X-CSRF-Token': '<%= form_authenticity_token.to_s %>'
-          },
-          data: {paypal: paypal, sequence: sequence, game: '<%= @game.id %>'}
-        });
-          alert('{paypal: paypal, sequence: sequence, game: <%= @game.id %>}');
-
+      $(".go").click(function() {
+        //event.preventDefault();
+        $('.paypal').submit();
       });
-      */
 
       //botones
       $( ".showme_off" ).click(function() {
@@ -49,27 +37,14 @@
       function show_payment(n_seq) {
         var payment;
         $.ajax({
-            type: "post",
-            url: "http://127.0.0.1:8000/games/get_payment/",
-            data: {game: {{ game.pk }}, n: n_seq} ,
-            success: function (data) {
-              $( ".price").html( 'Total: $' + data['payment'] );
-            },
-            error:function(x,e){
-                if(x.status==0){
-                    alert('You are offline!!\n Please Check Your Network.');
-                }else if(x.status==404){
-                    alert('Requested URL not found.');
-                }else if(x.status==500){
-                    alert('Internel Server Error.');
-                }else if(e=='parsererror'){
-                    alert('Error.\nParsing JSON Request failed.');
-                }else if(e=='timeout'){
-                    alert('Request Time out.');
-                }else {
-                    alert('Unknow Error.\n'+x.responseText);
-                }
-            }
+          type: "post",
+          url: "/games/get_payment/",
+          data: {game: {{ game.pk }}, n: n_seq} ,
+          success: function (data) {
+            var payment = data['payment'];
+            $( ".price" ).html( 'Total: $' + payment );
+            $( "input[name=amount]" ).val(payment);
+          }
         });
       }
       $( "#counter_down" ).click(function() {
@@ -156,7 +131,22 @@
     <form action="." method="post">
       <input type="email" class="paypal" placeholder="PayPal account: to receive your prize">
       <div class="price" hidden="true">Total: ${{ game.payment }}</div>
-      <input type="submit" class="go" value="GO">
+      <input type="button" class="go" value="GO">
+    </form>
+    <form class="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="circles@gmail.com">
+      <input type="hidden" name="lc" value="PE">
+      <input type="hidden" name="item_name" value="sequences">
+      <input type="hidden" name="amount" value="{{ game.payment }}">
+      <input type="hidden" name="currency_code" value="USD">
+      <input type="hidden" name="button_subtype" value="services">
+      <input type="hidden" name="no_note" value="1">
+      <input type="hidden" name="no_shipping" value="2">
+      <input type="hidden" name="rm" value="1">
+      <input type="hidden" name="return" value="https://www.mystore.com/success">
+      <input type="hidden" name="cancel_return" value="https://www.mystore.com/cancel">
+      <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
     </form>
   </div>
 </div>
