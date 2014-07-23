@@ -1,99 +1,18 @@
 <html>
 <head>
-  <link rel="stylesheet" href="{{STATIC_URL}}flow.css">
+  <link rel="stylesheet" href="{{STATIC_URL}}css/flow.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="{{STATIC_URL}}js/flow.js"></script>
+  <script src="{{STATIC_URL}}js/buttons.js"></script>
+  <script src="{{STATIC_URL}}js/counter.js"></script>
   <script>
     $(document).ready(function() {
-      var sequence = new Array(7);
-      var showme_n = 1; //cantidad de sequences a mostrar
-
-      $(".go").click(function() {
-        //event.preventDefault();
-        $('.paypal').submit();
-      });
-
-      //botones
-      $( ".showme_off" ).click(function() {
-        $( ".play_on" ).hide();
-        $( ".showme_on" ).show();
-        $( ".showme_off" ).hide();
-        $( ".play_off" ).show();
-        $( ".selectors-wrapper").hide();
-        $( ".price").show();
-      });
-      $( ".play_off" ).click(function() {
-        $( ".play_off" ).hide();
-        $( ".showme_off" ).show();
-        $( ".showme_on" ).hide();
-        $( ".play_on" ).show();
-        $( ".selectors-wrapper").show();
-        $( ".price").hide();
-      });
-
-      //counter
-      function show_payment(n_seq) {
-        var payment;
-        $.ajax({
-          type: "post",
-          url: "/games/get_payment/",
-          data: {game: {{ game.pk }}, n: n_seq} ,
-          success: function (data) {
-            var payment = data['payment'];
-            $( ".price" ).html( 'Total: $' + payment );
-            $( "input[name=amount]" ).val(payment);
-          }
-        });
-      }
-      $( "#counter_down" ).click(function() {
-        showme_n--;
-        $('#showme_n').empty();
-        if ((showme_n == 0) || (showme_n == 1)){
-          if (showme_n == 0) { showme_n++ };
-          $('#showme_n').append('SHOW ME ' + showme_n + ' SEQUENCE');
-        }
-        else {
-          $('#showme_n').append('SHOW ME ' + showme_n + ' SEQUENCES');
-        }
-        show_payment(showme_n);
-      });
-      $( "#counter_up" ).click(function() {
-        showme_n++;
-        $('#showme_n').empty();
-        $('#showme_n').append('SHOW ME ' + showme_n + ' SEQUENCES');
-        show_payment(showme_n);
-      });
-
-      //flow
-      var sequence = new Array(7);
-      $( ".selector" ).draggable({
-        revert: true,
-        cursor: 'move',
-        drag: function () { 
-        }
-      });
-      $( ".circle" ).droppable({
-        drop: function (event, ui) {
-          var pos = $(this).attr('class').split(' ')[1];
-          var selector = $(ui.draggable);
-          var selector_color = selector.css("background-color");
-          var circle_color = $(this).css("background-color");
-          var exists_color = jQuery.inArray(selector_color, sequence);
-
-          if (exists_color > -1) { //existe
-            var pos_existing_color = sequence.indexOf(selector_color);
-            var circle_with_current_color = $( "." + pos_existing_color);
-            //removing existing color
-            delete sequence[pos_existing_color];
-            //sequence.remove(pos_existing_color);
-            circle_with_current_color.css("background-color", "rgba(0, 0, 0, 0)");
-          }
-          $(this).css("background-color", selector_color);
-          sequence[pos] = selector_color;
-        }
-      });
+      buttons();
+      counter({{ game.pk }});
+      flow();
     });
   </script>
 </head>
@@ -133,9 +52,9 @@
       <div class="price" hidden="true">Total: ${{ game.payment }}</div>
       <input type="button" class="go" value="GO">
     </form>
-    <form class="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <form class="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
       <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="circles@gmail.com">
+      <input type="hidden" name="business" value="payment@circles.com">
       <input type="hidden" name="lc" value="PE">
       <input type="hidden" name="item_name" value="sequences">
       <input type="hidden" name="amount" value="{{ game.payment }}">
@@ -144,8 +63,8 @@
       <input type="hidden" name="no_note" value="1">
       <input type="hidden" name="no_shipping" value="2">
       <input type="hidden" name="rm" value="1">
-      <input type="hidden" name="return" value="https://www.mystore.com/success">
-      <input type="hidden" name="cancel_return" value="https://www.mystore.com/cancel">
+      <input type="hidden" name="return" value="http://181.64.61.98:8000/games/{{game.pk}}">
+      <input type="hidden" name="cancel_return" value="181.64.61.98:8000/games/{{game.id}}">
       <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
     </form>
   </div>

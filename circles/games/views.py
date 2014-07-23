@@ -2,7 +2,7 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.http import HttpResponse
 from django.views.decorators.http import require_POST
-from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import csrf_exempt, ensure_csrf_cookie
 
 # FIXME it is deprecated
 from django.utils import simplejson
@@ -19,13 +19,25 @@ class GameListView(ListView):
         context = super(GameListView, self).get_context_data(**kwargs)
         return context
 
-
 class GameDetailView(DetailView):
     model = Game
+
+    @csrf_exempt
+    def dispatch(self, *args, **kwargs):
+        return super(GameDetailView, self).dispatch(*args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        print request.POST
+        return HttpResponse('This is POST request')
+
+    def get(self, request, *args, **kwargs):
+        print request.GET
+        return super(GameDetailView, self).get(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super(GameDetailView, self).get_context_data(**kwargs)
         return context
+
 
 @csrf_exempt
 @require_POST
@@ -35,4 +47,5 @@ def get_payment(request):
     calculator = PaymentCalculator(n, game_pk)
     info = {'payment': float(calculator.get_price())}
     data = simplejson.dumps(info)
+    print(n, info)
     return HttpResponse(data, mimetype='application/json')
