@@ -1,15 +1,15 @@
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResposneForbidden
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt, ensure_csrf_cookie
 
 # FIXME it is deprecated
 from django.utils import simplejson
 
-
 from games.models import Game
-from games.utils import PaymentCalculator
+from games.utils import PaymentCalculator, paypal_get_payment_info, paypal_save_payment_info
+from circles.settings import PAYPAL_PDT_ID_TOKEN
 
 
 class GameListView(ListView):
@@ -31,8 +31,15 @@ class GameDetailView(DetailView):
         return HttpResponse('This is POST request')
 
     def get(self, request, *args, **kwargs):
-        print request.GET
-        return super(GameDetailView, self).get(request, *args, **kwargs)
+        sucess, info = paypal_get_payment_info(request.GET.get("tx"),
+            PAYPAL_PDT_ID_TOKEN)
+        if sucess:
+            if paypal_save_payment_info(info):
+                context = self.get_context_data(**kwargs)
+                return render_to_response('game_paid.html', context,
+                    content_type="application/xhtml+xml")
+        return HttpResonseForbidden()
+
 
     def get_context_data(self, **kwargs):
         context = super(GameDetailView, self).get_context_data(**kwargs)

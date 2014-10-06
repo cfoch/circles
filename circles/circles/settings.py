@@ -87,3 +87,7 @@ STATIC_URL = '/static/'
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
+
+# Paypal
+PAYPAL_PDT_ID_TOKEN =\
+    "A0gfuF23_LOLyKf2Z3e8iFRK5VeXvuRrEVnDdal5hQcVRqVVgR8MnIrOI2G"

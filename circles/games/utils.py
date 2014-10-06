@@ -1,9 +1,71 @@
+import urllib
+import urllib2
+from urllib import unquote
 from decimal import Decimal
 
 from factors.factory import FactorFunctionsFactory
 from factors.utils import valid_factor_name
 from games.models import Game
+from games.models import Payment
+from games.models import Player
 
+
+def paypal_get_payment_info(tx,at):
+    success = False
+    post_data = [('cmd', '_notify-synch'), ('tx', tx), ('at', at)]
+    result = urllib2.urlopen('https://www.sandbox.paypal.com/cgi-bin/webscr', urllib.urlencode(post_data))
+    content = result.read().split('\n')
+    info = {}
+
+    for each in content[1:]:
+        try:
+            key, value = each.split("=")
+            info[key] = value
+        except:
+            pass
+    if content[0].find('SUCCESS') >= 0:
+        success = True
+
+    return success, info
+
+def deserialize_paypal_custom_data(data):
+    data = unquote(data)
+    l = data.split("=")
+    dic = {}
+    for i in range(0, len(l), 2):
+        dic[l[i]] = l[i + 1]
+    return dic
+
+def paypal_save_payment_info(info):
+    custom_data = deserialize_paypal_custom_data(info['custom'])
+    payer_email = unquote(info['payer_email'])
+    payment_gross = Decimal(info['payment_gross'])
+    sequences_number = custom_data['sequences_number']
+    quantity = int(info['quantity'])
+    paypal_txn_id = info['txn_id']
+
+    # Create player if not exists.
+    try:
+        player = Player.objects.get(paypal=payer_email)
+    except:
+        player = Player()
+        player.paypal = payer_email
+    try:
+        payment = Payment()
+        payment.paypal_txn_id = paypal_txn_id
+        payment.payment_gross = payment_gross
+        payment.sequences_number = sequences_number
+        payment.sequences_played = 0
+        payment.quantity = quantity
+        payment.save()
+        # Link payment to this player
+        player.save()
+        player.payments.add(payment)
+        player.save()
+        return True
+    except:
+        pass
+    return False
 
 class PaymentCalculator:
     """

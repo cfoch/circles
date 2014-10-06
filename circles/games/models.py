@@ -52,9 +52,12 @@ class Player(models.Model):
 
 
 class Payment(models.Model):
-    amount = models.DecimalField(max_digits=8, decimal_places=2)
+    paypal_txn_id = models.CharField(max_length=20, unique=True)
+    payment_gross = models.DecimalField(max_digits=8, decimal_places=2)
     quantity = models.IntegerField(max_length=3)
-    #player = models.OneToOneField("Player")
+    sequences_number = models.IntegerField()
+    sequences_played = models.IntegerField()
+    game = models.OneToOneField("Game")
 
 
 class Game(models.Model):

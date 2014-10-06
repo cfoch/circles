@@ -127,8 +127,11 @@ class Command(BaseCommand):
         Creates a payment randomly, then returns it.
         """
         payment = Payment()
-        payment.amount = random.uniform(0, 5)
+        payment.paypal_txn_id = str(random.uniform(0,100000000))
+        payment.payment_gross = random.uniform(0, 5)
         payment.quantity = random.randint(1, 5)
+        payment.sequences_number = random.randint(1,10)
+        payment.sequences_played = random.randint(1,10)
         payment.save()
         return payment
 
