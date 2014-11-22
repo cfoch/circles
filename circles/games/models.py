@@ -47,29 +47,31 @@ class Sequence(models.Model):
 
 class Player(models.Model):
     paypal = models.EmailField()
-    sequences = models.ManyToManyField("Sequence")
+    #sequences = models.ManyToManyField("Sequence")
     payments = models.ManyToManyField("Payment")
+    moves = models.ManyToManyField("SequenceGame")
 
 
 class Payment(models.Model):
     paypal_txn_id = models.CharField(max_length=20, unique=True)
     payment_gross = models.DecimalField(max_digits=8, decimal_places=2)
     quantity = models.IntegerField(max_length=3)
-    sequences_number = models.IntegerField()
-    sequences_played = models.IntegerField()
-    game = models.OneToOneField("Game")
+    #sequences_number = models.IntegerField()
+    sequences_shown = models.IntegerField()
+    game = models.ForeignKey("Game")
 
 
 class Game(models.Model):
     AVAILABLE_COLORS = 7
     MAX_DISCOUNT = 0.25
 
-    sequences = models.ManyToManyField("Sequence", null=True, blank=True)
+    #sequences = models.ManyToManyField("Sequence", null=True, blank=True)
+    sequences = models.ManyToManyField("Sequence", null=True, blank=True, through='SequenceGame')
     initial_amount = models.IntegerField()
     percentage = models.IntegerField()
     prize = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True)
     # Payment to see a sequence
-    payment = models.DecimalField(max_digits=8, decimal_places=2)
+    base_payment = models.DecimalField(max_digits=8, decimal_places=2)
     winner_sequence = models.OneToOneField("Sequence", related_name="+", null=True, blank=True)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
@@ -89,3 +91,8 @@ class Game(models.Model):
         if self.available_colors.count() != self.AVAILABLE_COLORS:
             raise ValidationError("You have to set %s colors" % self.AVAILABLE_COLORS)
 """
+
+class SequenceGame(models.Model):
+    sequence = models.ForeignKey("Sequence")
+    game = models.ForeignKey("Game")
+    n_moves = models.PositiveIntegerField()

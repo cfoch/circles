@@ -1,6 +1,6 @@
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from django.http import HttpResponse, HttpResposneForbidden
+from django.http import HttpResponse, HttpResponseForbidden
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt, ensure_csrf_cookie
 
@@ -31,15 +31,18 @@ class GameDetailView(DetailView):
         return HttpResponse('This is POST request')
 
     def get(self, request, *args, **kwargs):
-        sucess, info = paypal_get_payment_info(request.GET.get("tx"),
-            PAYPAL_PDT_ID_TOKEN)
-        if sucess:
-            if paypal_save_payment_info(info):
-                context = self.get_context_data(**kwargs)
-                return render_to_response('game_paid.html', context,
-                    content_type="application/xhtml+xml")
-        return HttpResonseForbidden()
-
+        tx = request.GET.get("tx")
+        if tx:
+            sucess, info = paypal_get_payment_info(tx, PAYPAL_PDT_ID_TOKEN)
+            if sucess:
+                print("success-tx", sucess)
+                if paypal_save_payment_info(info):
+                    print("MIERDA")
+                    context = self.get_context_data(**kwargs)
+                    return render_to_response('game_paid.html', context,
+                        content_type="application/xhtml+xml")
+        #return HttpResponseForbidden()
+        return super(GameDetailView, self).get(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super(GameDetailView, self).get_context_data(**kwargs)

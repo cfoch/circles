@@ -37,12 +37,13 @@ def deserialize_paypal_custom_data(data):
     return dic
 
 def paypal_save_payment_info(info):
+    print(info)
     custom_data = deserialize_paypal_custom_data(info['custom'])
     payer_email = unquote(info['payer_email'])
     payment_gross = Decimal(info['payment_gross'])
-    sequences_number = custom_data['sequences_number']
     quantity = int(info['quantity'])
     paypal_txn_id = info['txn_id']
+    game_id = custom_data['game_id']
 
     # Create player if not exists.
     try:
@@ -50,21 +51,22 @@ def paypal_save_payment_info(info):
     except:
         player = Player()
         player.paypal = payer_email
-    try:
-        payment = Payment()
-        payment.paypal_txn_id = paypal_txn_id
-        payment.payment_gross = payment_gross
-        payment.sequences_number = sequences_number
-        payment.sequences_played = 0
-        payment.quantity = quantity
-        payment.save()
-        # Link payment to this player
-        player.save()
-        player.payments.add(payment)
-        player.save()
-        return True
-    except:
-        pass
+        print("HOLA")
+
+    payment = Payment()
+    payment.paypal_txn_id = paypal_txn_id
+    payment.payment_gross = payment_gross
+    payment.quantity = quantity
+    payment.sequences_shown = 0
+    payment.game = Game.objects.get(game_id=game_id)
+    print(paypal_txn_id, payment_gross, quantity)
+    payment.save()
+    # Link payment to this player
+    player.save()
+    player.payments.add(payment)
+    player.save()
+    return True
+
     return False
 
 class PaymentCalculator:
@@ -82,7 +84,7 @@ class PaymentCalculator:
         game = Game.objects.get(pk=game_pk)
 
         self.max_discount = float(game.max_discount)
-        self.base_payment = float(game.payment)
+        self.base_payment = float(game.base_payment)
         self.sequences_played = float(game.sequences.all().count())
         self.n_sequences = float(n)
         self.factors = self._getFactors(game)

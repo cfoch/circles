@@ -26,14 +26,14 @@ function counter(pk) {
       $('#showme_n').append('SHOW ME ' + showme_n + ' SEQUENCES');
     }
     show_payment(showme_n, pk);
-    $('input[name=custom]').val('sequences_number=' + showme_n);
+    $('input[name=custom]').val('quantity=' + showme_n);
   });
   $( "#counter_up" ).click(function() {
     showme_n++;
     $('#showme_n').empty();
     $('#showme_n').append('SHOW ME ' + showme_n + ' SEQUENCES');
     show_payment(showme_n, pk);
-    $('input[name=custom]').val('sequences_number=' + showme_n);
+    $('input[name=custom]').val('quantity=' + showme_n);
   });
 }
 

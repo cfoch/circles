@@ -7,7 +7,7 @@ from django.core.management import call_command
 from django.utils import timezone
 
 from factors.models import FactorFunction
-from games.models import Color, Game, Sequence, Player, Payment
+from games.models import Color, Game, Sequence, Player, Payment, SequenceGame
 
 
 class Command(BaseCommand):
@@ -55,7 +55,7 @@ class Command(BaseCommand):
             game = Game()
             game.initial_amount = random.randint(0, 100)
             game.percentage = random.randint(0, 100)
-            game.payment = random.uniform(0, 5)
+            game.base_payment = random.uniform(0, 5)
             game.start_date = timezone.now()
             game.end_date = game.start_date + datetime.timedelta(days=random.randint(3, 30))
             game.save()
@@ -87,14 +87,13 @@ class Command(BaseCommand):
             player.paypal = email
             player.save()
 
-            # The play has played n-sequences in different games
-            n = random.randint(1,10)
+            #SequenceGame
+            n = random.randint(1, 10)
             for i in range(n):
-                sequence = self._create_sequence()
-                player.sequences.add(sequence)
-                # Add the player to the current sequence
-                sequence.players.add(player)
-                sequence.save()
+                sequence_game = SequenceGame.objects.all().order_by('?')[0]
+                sequence_game.n_moves += 1
+                sequence_game.save()                
+                player.moves.add(sequence_game)
 
             # Generate payments
             for i in range(random.randint(0, 5)):
@@ -120,7 +119,17 @@ class Command(BaseCommand):
             sequence.save()
             sequence.colors.add(*colors_randomized)
             sequence.save()
+        sequence_game = SequenceGame(sequence=sequence, game=game, n_moves=0)
+        sequence_game.save()        
         return sequence
+
+    def _create_sequences(self):
+        """
+        Creates n sequences
+        """
+        n = random.randint(1,500)
+        for i in range(n):
+            self._create_sequence()
 
     def _create_payment(self):
         """
@@ -130,8 +139,8 @@ class Command(BaseCommand):
         payment.paypal_txn_id = str(random.uniform(0,100000000))
         payment.payment_gross = random.uniform(0, 5)
         payment.quantity = random.randint(1, 5)
-        payment.sequences_number = random.randint(1,10)
-        payment.sequences_played = random.randint(1,10)
+        payment.sequences_shown = random.randint(1,10)
+        payment.game = Game.objects.all().order_by('?')[0]
         payment.save()
         return payment
 
@@ -141,7 +150,7 @@ class Command(BaseCommand):
             os.remove(db_file)
         call_command('syncdb', interactive=True)
         call_command('update_factors')
-        
+
 
     def handle(self, *args, **options):
         DEFAULT_PLAYERS_CREATED = 50
@@ -149,4 +158,5 @@ class Command(BaseCommand):
         self._reset_database()
         self._create_colors()
         self._create_games(3)
+        self._create_sequences()
         self._create_players(DEFAULT_PLAYERS_CREATED)
