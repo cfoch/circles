@@ -27,10 +27,9 @@ class Command(BaseCommand):
         """
         factors_names = [
             factor_name
-            for factor_name in dir(FactorFunctionsFactory)
-            if valid_factor_name(factor_name)
+            for factor_name in dir(FactorFunctionsFactory) if valid_factor_name(factor_name)
         ]
-        print factors_names
+        print("Checking ", factors_names)
         for factor_name in factors_names:
             self._update_create_factor(factor_name)
         print("SUCESS: Factors have been updated")

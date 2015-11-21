@@ -151,7 +151,6 @@ class Command(BaseCommand):
         call_command('syncdb', interactive=True)
         call_command('update_factors')
 
-
     def handle(self, *args, **options):
         DEFAULT_PLAYERS_CREATED = 50
 

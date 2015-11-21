@@ -1,6 +1,25 @@
+.bg-red {
+  background-color: red;
+}
+
+.container-padding {
+  padding: 22px 0px 22px 0px;
+}
+
+header {
+  background-color: rgba(170,212,0,255);
+  text-align: center;
+  padding: 44px 0px 44px 0px;
+}
+
+div.instructions-container {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background-color: black;
+}
+
+/* FLOW */
 div.flow {
-  position: absolute;
-  /*background-color: red;*/
   width: 554px;
   height: auto;
 }
@@ -23,11 +42,10 @@ div.selectors-wrapper {
 }
 
 div.go-wrapper {
-  /*background-color: blue;*/
   float: right;
   height: 34px;
-  
 }
+
 .circle {
   outline: 0;
   width: 72px;
@@ -63,6 +81,7 @@ input.paypal {
   border-radius: 17px 0 0 17px;
   line-height: 34px;
   font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
 }
 
 input.go {
@@ -74,6 +93,7 @@ input.go {
   color: #FFFFFF;
   border-radius: 0 17px 17px 0;
   font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
   font-weight: bold;
   text-align: center;
   padding-left: 3px;
@@ -85,6 +105,7 @@ div.current_state {
   height: 34px;  
   line-height: 34px;
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   color: #FFFFFF;
   text-align: center;
   padding-left: 3px;
@@ -118,6 +139,7 @@ div.led {
   height: 34px;  
   line-height: 34px;
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   text-align: center;
   border-radius: 0 5px 5px 0;
 }
@@ -138,6 +160,7 @@ div.onl {
   height: 34px;  
   line-height: 34px;
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   color: #426382;
   text-align: center;
   border-radius: 0 5px 5px 0;
@@ -150,6 +173,7 @@ div.state_off {
   height: 34px;  
   line-height: 36px;
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   color: #FFFFFF;
   text-align: center;
   border-radius: 18px;
@@ -168,6 +192,20 @@ div.showme_off {
   width: 205px;
 }
 
+div.click2show {
+  background-color: #426382;
+  border-color: #426382; 
+  width: 260px;
+  float: right;
+}
+
+div.payment_advise {
+  background-color: black;
+  border-color: black; 
+  width: 260px;
+  float: left;
+}
+
 form.go_form {
   float: right; 
 }
@@ -183,6 +221,7 @@ div.counter {
   border-style: solid;
   border-width: 1px;
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   color: #FFFFFF;
   font-weight: bold;
   cursor: pointer;
@@ -194,9 +233,10 @@ div.price {
   border-bottom: 1px solid #426382;  
   padding-left: 13px;
   padding-right: 13px; 
-  width: 100px;
-  height: 32px;
-  line-height: 34px;
+  width: 120px;
+  height: 34px;
+  line-height: 32px;
   font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
   text-align: center;
 }

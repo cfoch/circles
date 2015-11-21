@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="web.svg"
+   inkscape:export-filename="/home/cfoch/Documents/git/circles/mockups/web.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4227">
+      <rect
+         style="opacity:0.97000002;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4229"
+         width="573.76666"
+         height="202.0305"
+         x="-431.33514"
+         y="543.2453" />
+    </clipPath>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4344"
+       x="-0.0025012452"
+       width="1.0050025"
+       y="-0.024876158"
+       height="1.0497523">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.40124142"
+         id="feGaussianBlur4346" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="6800.5012"
+     inkscape:cy="-196.32892"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="704"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     showguides="false" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="opacity:0.97000002;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4136"
+       cx="-251.1414"
+       cy="204.80937"
+       r="87.378197" />
+    <image
+       sodipodi:absref="/home/cfoch/Pictures/Screenshot from 2015-08-02 03-28-09.png"
+       y="454.20987"
+       x="-432.48218"
+       id="image4222"
+       xlink:href="file:///home/cfoch/Pictures/Screenshot%20from%202015-08-02%2003-28-09.png"
+       preserveAspectRatio="none"
+       height="768"
+       width="1366"
+       clip-path="url(#clipPath4227)"
+       transform="translate(519.66945,-36.114614)" />
+    <g
+       id="g4271"
+       transform="translate(18.418416,31.173486)">
+      <circle
+         r="81.134926"
+         cy="200.10902"
+         cx="1315.4489"
+         id="path4152"
+         style="opacity:0.97000002;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4.081038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:54.41384125px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1048.7539"
+         y="223.08876"
+         id="text4142"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4144"
+           x="1048.7539"
+           y="223.08876">circles</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4146"
+         y="223.11534"
+         x="1270.8125"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:54.41384125px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="223.11534"
+           x="1270.8125"
+           id="tspan4148"
+           sodipodi:role="line">bet</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4231"
+         y="245.52463"
+         x="1125.8618"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.31359768px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="245.52463"
+           x="1125.8618"
+           id="tspan4233"
+           sodipodi:role="line">fun is money</tspan></text>
+    </g>
+    <rect
+       style="opacity:0.97000002;fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.21909428;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4254"
+       width="770.78088"
+       height="481.4205"
+       x="857.77985"
+       y="-54.682575" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="761"
+       y="247.36221"
+       id="text4256"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4258"
+         x="761"
+         y="247.36221">$50</tspan></text>
+    <rect
+       y="-55.457455"
+       x="857.00494"
+       height="129.20366"
+       width="772.33063"
+       id="rect4280"
+       style="opacity:0.97000002;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.66934073;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="opacity:0.97000002;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4286"
+       width="4"
+       height="2"
+       x="958"
+       y="3.3622048" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4290"
+       width="129"
+       height="43"
+       x="1460.2258"
+       y="-17.026972"
+       rx="21.5"
+       ry="21.5" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'PT Sans';-inkscape-font-specification:'PT Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4344)"
+       x="900.35651"
+       y="24.343262"
+       id="text4292"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4294"
+         x="900.35651"
+         y="24.343262"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'PT Sans';-inkscape-font-specification:'PT Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Current prize: $500</tspan></text>
+    <g
+       transform="translate(1053.1564,886.73609)"
+       id="g4348">
+      <circle
+         style="opacity:0.97000002;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4.081038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle4350"
+         cx="1315.4489"
+         cy="200.10902"
+         r="81.134926" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4352"
+         y="223.08876"
+         x="1048.7539"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:54.41384125px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="223.08876"
+           x="1048.7539"
+           id="tspan4354"
+           sodipodi:role="line">circles</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:54.41384125px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1270.8125"
+         y="223.11534"
+         id="text4356"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4358"
+           x="1270.8125"
+           y="223.11534">bet</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.31359768px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1125.8618"
+         y="245.52463"
+         id="text4360"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4362"
+           x="1125.8618"
+           y="245.52463">fun is money</tspan></text>
+    </g>
+    <rect
+       y="800.88"
+       x="1892.5178"
+       height="481.4205"
+       width="770.78088"
+       id="rect4364"
+       style="opacity:0.97000002;fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.21909428;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="opacity:0.97000002;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.66934073;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4366"
+       width="772.33063"
+       height="129.20366"
+       x="1891.7429"
+       y="800.10516" />
+    <rect
+       y="858.9248"
+       x="1992.738"
+       height="2"
+       width="4"
+       id="rect4368"
+       style="opacity:0.97000002;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       ry="21.5"
+       rx="21.5"
+       y="842.89081"
+       x="2427.6565"
+       height="43"
+       width="189.97252"
+       id="rect4370"
+       style="opacity:1;fill:#aad400;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4372"
+       y="860.90149"
+       x="1925.5923"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'PT Sans';-inkscape-font-specification:'PT Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'PT Sans';-inkscape-font-specification:'PT Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         y="860.90149"
+         x="1925.5923"
+         id="tspan4374"
+         sodipodi:role="line">Earn $435 for free</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:21.58309555px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1926.3617"
+       y="891.58228"
+       id="text4386"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4388"
+         x="1926.3617"
+         y="891.58228">1h 5min 30sec</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4402"
+       y="874.22467"
+       x="2492.4438"
+       style="font-style:normal;font-weight:normal;font-size:21.58309555px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="874.22467"
+         x="2492.4438"
+         id="tspan4404"
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:'Sans Bold'" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.27075386px;line-height:125%;font-family:'PT Sans';-inkscape-font-specification:'PT Sans, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="2497.2854"
+       y="875.55066"
+       id="text4406"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4408"
+         x="2497.2854"
+         y="875.55066"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.27075386px;line-height:125%;font-family:'PT Sans';-inkscape-font-specification:'PT Sans';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;">PLAY</tspan></text>
+    <rect
+       y="597.68311"
+       x="3286.2632"
+       height="675.48328"
+       width="1081.4861"
+       id="rect4461"
+       style="opacity:0.97000002;fill:none;fill-opacity:1;stroke:#000000;stroke-width:4.51672554;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g4410"
+       transform="matrix(0.48091116,0,0,0.48091116,3188.3446,608.38231)">
+      <circle
+         r="81.134926"
+         cy="200.10902"
+         cx="1315.4489"
+         id="circle4412"
+         style="opacity:0.97000002;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4.081038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:54.41384125px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1048.7539"
+         y="223.08876"
+         id="text4414"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4416"
+           x="1048.7539"
+           y="223.08876">circles</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4418"
+         y="223.11534"
+         x="1270.8125"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:54.41384125px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="223.11534"
+           x="1270.8125"
+           id="tspan4420"
+           sodipodi:role="line">bet</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4422"
+         y="245.52463"
+         x="1125.8618"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.31359768px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="245.52463"
+           x="1125.8618"
+           id="tspan4424"
+           sodipodi:role="line">fun is money</tspan></text>
+    </g>
+    <image
+       transform="translate(3961.3606,430.86876)"
+       clip-path="url(#clipPath4227)"
+       width="1366"
+       height="768"
+       preserveAspectRatio="none"
+       xlink:href="file:///home/cfoch/Pictures/Screenshot%20from%202015-08-02%2003-28-09.png"
+       id="image4459"
+       x="-432.48218"
+       y="454.20987"
+       sodipodi:absref="/home/cfoch/Pictures/Screenshot from 2015-08-02 03-28-09.png" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:36.53008652px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="3531.4827"
+       y="825.65326"
+       id="text4484"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4486"
+         x="3531.4827"
+         y="825.65326"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'PT Sans';-inkscape-font-specification:'PT Sans'">EARN $44.04 FOR <tspan
+   style="fill:#aad400;-inkscape-font-specification:'PT Sans';font-family:'PT Sans';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="tspan4490">FREE!</tspan> JUST <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'PT Sans';-inkscape-font-specification:'PT Sans';fill:#aad400"
+   id="tspan4488">PLAY!</tspan></tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4540"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:'PT Sans';-inkscape-font-specification:'PT Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(0,7.636039)"><flowRegion
+         id="flowRegion4542"><rect
+           id="rect4544"
+           width="560.73566"
+           height="124.45079"
+           x="3534.1196"
+           y="835.2804"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:'PT Sans';-inkscape-font-specification:'PT Sans'" /></flowRegion><flowPara
+         id="flowPara4552">Many people around the world will create sequences of colors. Of course! There might be many repeated sequences. But the less repeated sequence will be the winner! The winner sequence will earn $44.04 which will be</flowPara><flowPara
+         id="flowPara4556">distributed between all the players who played this sequence. Imagine you</flowPara><flowPara
+         id="flowPara4558">are the only one who played these sequence: you will receive all the prize!</flowPara></flowRoot>    <rect
+       style="opacity:0.97000002;fill:none;fill-opacity:1;stroke:#000000;stroke-width:4.51672554;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4626"
+       width="1081.4861"
+       height="675.48328"
+       x="4618.4521"
+       y="597.68311" />
+    <g
+       transform="matrix(0.48091116,0,0,0.48091116,4520.5338,608.38231)"
+       id="g4628">
+      <circle
+         style="opacity:0.97000002;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4.081038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle4630"
+         cx="1315.4489"
+         cy="200.10902"
+         r="81.134926" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4632"
+         y="223.08876"
+         x="1048.7539"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:54.41384125px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="223.08876"
+           x="1048.7539"
+           id="tspan4634"
+           sodipodi:role="line">circles</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:54.41384125px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1270.8125"
+         y="223.11534"
+         id="text4636"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4638"
+           x="1270.8125"
+           y="223.11534">bet</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.31359768px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1125.8618"
+         y="245.52463"
+         id="text4640"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4642"
+           x="1125.8618"
+           y="245.52463">fun is money</tspan></text>
+    </g>
+    <image
+       sodipodi:absref="/home/cfoch/Pictures/Screenshot from 2015-08-02 03-28-09.png"
+       y="454.20987"
+       x="-432.48218"
+       id="image4644"
+       xlink:href="file:///home/cfoch/Pictures/Screenshot%20from%202015-08-02%2003-28-09.png"
+       preserveAspectRatio="none"
+       height="768"
+       width="1366"
+       clip-path="url(#clipPath4227)"
+       transform="translate(5293.5498,430.86876)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4646"
+       y="825.65326"
+       x="4863.6719"
+       style="font-style:normal;font-weight:normal;font-size:36.53008652px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'PT Sans';-inkscape-font-specification:'PT Sans'"
+         y="825.65326"
+         x="4863.6719"
+         id="tspan4648"
+         sodipodi:role="line">EARN $44.04 FOR <tspan
+   id="tspan4650"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'PT Sans';-inkscape-font-specification:'PT Sans';fill:#aad400">FREE!</tspan> JUST <tspan
+   id="tspan4652"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'PT Sans';-inkscape-font-specification:'PT Sans';fill:#aad400">PLAY!</tspan></tspan></text>
+    <flowRoot
+       transform="translate(1332.1892,7.636039)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:'PT Sans';-inkscape-font-specification:'PT Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4654"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4656"><rect
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:'PT Sans';-inkscape-font-specification:'PT Sans'"
+           y="835.2804"
+           x="3534.1196"
+           height="124.45079"
+           width="560.73566"
+           id="rect4658" /></flowRegion><flowPara
+         id="flowPara4660">Many people around the world will create sequences of colors. Of course! There might be many repeated sequences. But the less repeated sequence will be the winner! The winner sequence will earn $44.04 which will be</flowPara><flowPara
+         id="flowPara4662">distributed between all the players who played this sequence. Imagine you</flowPara><flowPara
+         id="flowPara4664">are the only one who played these sequence: you will receive all the prize!</flowPara></flowRoot>    <rect
+       y="597.68311"
+       x="6298.4521"
+       height="675.48328"
+       width="1081.4861"
+       id="rect4666"
+       style="opacity:0.97000002;fill:#aad400;fill-opacity:1;stroke:#000000;stroke-width:4.51672554;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       y="-1270.1758"
+       x="6300.4658"
+       height="300.10818"
+       width="1077.4594"
+       id="rect4718"
+       style="opacity:0.97000002;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.88659549;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="scale(1,-1)" />
+    <rect
+       style="opacity:0.97000002;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.88659549;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4710"
+       width="1083.1162"
+       height="221.73663"
+       x="6297.6372"
+       y="748.33099" />
+    <g
+       id="g4668"
+       transform="matrix(0.48091116,0,0,0.48091116,6200.5338,581.41175)">
+      <circle
+         r="81.134926"
+         cy="200.10902"
+         cx="1315.4489"
+         id="circle4670"
+         style="opacity:0.97000002;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4.081038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:54.41384125px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1048.7539"
+         y="223.08876"
+         id="text4672"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4674"
+           x="1048.7539"
+           y="223.08876">circles</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4676"
+         y="223.11534"
+         x="1270.8125"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:54.41384125px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#aad400;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+         xml:space="preserve"><tspan
+           y="223.11534"
+           x="1270.8125"
+           id="tspan4678"
+           sodipodi:role="line">bet</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4680"
+         y="245.52463"
+         x="1125.8618"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.31359768px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="245.52463"
+           x="1125.8618"
+           id="tspan4682"
+           sodipodi:role="line">fun is money</tspan></text>
+    </g>
+    <image
+       transform="translate(6973.5498,469.05253)"
+       clip-path="url(#clipPath4227)"
+       width="1366"
+       height="768"
+       preserveAspectRatio="none"
+       xlink:href="file:///home/cfoch/Pictures/Screenshot%20from%202015-08-02%2003-28-09.png"
+       id="image4684"
+       x="-432.48218"
+       y="454.20987"
+       sodipodi:absref="/home/cfoch/Pictures/Screenshot from 2015-08-02 03-28-09.png" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:36.53008652px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="6543.6719"
+       y="811.65326"
+       id="text4686"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4688"
+         x="6543.6719"
+         y="811.65326"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'PT Sans';-inkscape-font-specification:'PT Sans'"><tspan
+           style="fill:#ffffff"
+           id="tspan4712">EARN $44.04 FOR </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'PT Sans';-inkscape-font-specification:'PT Sans';fill:#aad400"
+           id="tspan4690">FREE!</tspan><tspan
+           style="fill:#ffffff"
+           id="tspan4714"> JUST </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'PT Sans';-inkscape-font-specification:'PT Sans';fill:#aad400"
+           id="tspan4692">PLAY!</tspan></tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4694"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:'PT Sans';-inkscape-font-specification:'PT Sans';letter-spacing:0px;word-spacing:0px;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(3012.1892,-6.363961)"><flowRegion
+         id="flowRegion4696"><rect
+           id="rect4698"
+           width="560.73566"
+           height="124.45079"
+           x="3534.1196"
+           y="835.2804"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:'PT Sans';-inkscape-font-specification:'PT Sans';fill:#f9f9f9" /></flowRegion><flowPara
+         id="flowPara4700">Many people around the world will create sequences of colors. Of course! There might be many repeated sequences. But the less repeated sequence will be the winner! The winner sequence will earn $44.04 which will be</flowPara><flowPara
+         id="flowPara4702">distributed between all the players who played this sequence. Imagine you</flowPara><flowPara
+         id="flowPara4704">are the only one who played these sequence: you will receive all the prize!</flowPara></flowRoot>    <g
+       transform="matrix(0.48091116,0,0,0.48091116,6200.5338,581.41175)"
+       id="g4720">
+      <circle
+         style="opacity:0.97000002;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4.081038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle4722"
+         cx="1315.4489"
+         cy="200.10902"
+         r="81.134926" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4724"
+         y="223.08876"
+         x="1048.7539"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:54.41384125px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="223.08876"
+           x="1048.7539"
+           id="tspan4726"
+           sodipodi:role="line">circles</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:54.41384125px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#aad400;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+         x="1270.8125"
+         y="223.11534"
+         id="text4728"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4730"
+           x="1270.8125"
+           y="223.11534">bet</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.31359768px;line-height:125%;font-family:Comfortaa;-inkscape-font-specification:'Comfortaa, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1125.8618"
+         y="245.52463"
+         id="text4732"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4734"
+           x="1125.8618"
+           y="245.52463">fun is money</tspan></text>
+    </g>
+  </g>
+</svg>

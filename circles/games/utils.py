@@ -1,6 +1,5 @@
-import urllib
-import urllib2
-from urllib import unquote
+from urllib.request import urlopen
+from urllib.parse import unquote, urlencode
 from decimal import Decimal
 
 from factors.factory import FactorFunctionsFactory
@@ -13,8 +12,10 @@ from games.models import Player
 def paypal_get_payment_info(tx,at):
     success = False
     post_data = [('cmd', '_notify-synch'), ('tx', tx), ('at', at)]
-    result = urllib2.urlopen('https://www.sandbox.paypal.com/cgi-bin/webscr', urllib.urlencode(post_data))
-    content = result.read().split('\n')
+    data = urlencode(post_data)
+    bin_data = data.encode('utf-8')
+    result = urlopen('https://www.sandbox.paypal.com/cgi-bin/webscr', bin_data)
+    content = str(result.read()).split('\n')
     info = {}
 
     for each in content[1:]:

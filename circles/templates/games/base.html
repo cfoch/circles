@@ -1,0 +1,62 @@
+<html>
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{{STATIC_URL}}css/flow.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="{{STATIC_URL}}js/flow.js"></script>
+  <script src="{{STATIC_URL}}js/buttons.js"></script>
+  <script src="{{STATIC_URL}}js/counter.js"></script>
+  <script>
+    $(document).ready(function() {
+      buttons({% if is_paid_game %} true {% else %} false {% endif %});
+      counter({{ game.pk }});
+      flow();
+    });
+  </script>
+</head>
+<body>
+<header>
+  <div class="container-fluid">
+    <a href="#" class="text-center"><img src="{{STATIC_URL}}img/logo.png"></a>
+  </div>
+</header>
+<div class="instructions-container container-fluid container-padding">
+  <div class="col-md-6 col-md-offset-3">
+    <p>
+      <h1>
+      EARN $44.05 FOR
+      <span style="color: rgba(170,212,0,255);">FREE!</span> JUST
+      <span style="color: rgba(170,212,0,255);">PLAY!</span>
+      </h1>
+    </p>
+    <p>
+      <h4>
+      Many people around the world will create sequences of colors. Of course!
+      There might be many repeated sequences. But the less repeated sequence
+      will be the winner! The winner sequence will earn $44.04 which will be
+      distributed between all the players who played this sequence. Imagine you
+      are the only one who played these sequence: you will receive all the
+      prize!
+      </h4>
+    </p>
+  </div>
+</div>
+<div class="container-fluid container-padding">
+{% block flow %}
+{% include "games/flow.html" %}
+{% endblock %}
+</div>
+<footer>
+</footer>
+</body>
+</html>

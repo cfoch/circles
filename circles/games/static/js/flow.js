@@ -1,5 +1,5 @@
 //flow
-function flow () {
+function flow (is_paid_game) {
   var sequence = new Array(7);
   $( ".selector" ).draggable({
   revert: true,

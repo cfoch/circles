@@ -1,8 +1,19 @@
+import functools
 import datetime
 import math
 
-from factors.utils import factor_set_weight
 
+def factor_set_weight(weight):
+    """
+    It is just a decorator.
+    """
+    def decorator(factor_function):
+        @functools.wraps(factor_function)
+        def wrapper(*args, **kwargs):
+            factor = factor_function(*args, **kwargs)
+            return {"value": factor, "weight": weight}
+        return wrapper
+    return decorator
 
 class FactorFunctionsFactory:
     """

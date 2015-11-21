@@ -1,4 +1,5 @@
 import datetime
+import random
 
 from django.db import models
 
@@ -53,12 +54,21 @@ class Player(models.Model):
 
 
 class Payment(models.Model):
+    """
+    This class represent the payment a player pays in order to see a
+    <quantity> of sequences for a specific game. <sequences_shown> is the number
+    of the sequences which has been already shown (or played).
+    """
     paypal_txn_id = models.CharField(max_length=20, unique=True)
     payment_gross = models.DecimalField(max_digits=8, decimal_places=2)
     quantity = models.IntegerField(max_length=3)
-    #sequences_number = models.IntegerField()
+    # FIXME: sequences_shown should be a list of Sequence objects, actually.
     sequences_shown = models.IntegerField()
     game = models.ForeignKey("Game")
+
+    def show_sequence(self):
+        self.sequences_shown += 1
+        return random.choice(self.game.sequences)
 
 
 class Game(models.Model):

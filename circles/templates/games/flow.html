@@ -1,0 +1,78 @@
+  <div class="flow center-block">
+    <div class="options">
+      <div class="play_on" {% if is_paid_game %}hidden="true"{% endif %}>
+        <div class="current_state play">PLAY</div>
+        <div class="playled led">ON</div>
+      </div>
+      <div class="showme_on" {% if not is_paid_game %}hidden="true"{% endif %}>
+        <div id="showme_n" class="current_state showme">
+          {% if is_paid_game %}
+            SHOW ME {{ payment.sequences_shown }} SEQUENCES
+          {% else %}
+            SHOW ME 1 SEQUENCE
+          {% endif %}
+        </div>
+        {% if not is_paid_game %}
+          <div id="counter_down" class="counter">-</div>
+          <div id="counter_up" class="counter">+</div>
+        {% endif %}
+        <div class="showme_led led">ON</div>
+      </div>
+      <div class="list-unstyled showme_off state_off" {% if is_paid_game %}hidden="true"{% endif %}>
+        {% if is_paid_game %}
+          SHOW ME {{ payment.sequences_shown }} SEQUENCES
+        {% else %}
+          SHOW ME A SEQUENCE
+        {% endif %}
+      </div>
+      <div class="play_off state_off" {% if not is_paid_game %}hidden="true"{% endif %}>
+        PLAY
+      </div>
+    </div>
+    <div class="sequence-wrapper">
+      <div class="circle 0"></div>
+      <div class="circle 1"></div>
+      <div class="circle 2"></div>
+      <div class="circle 3"></div>
+      <div class="circle 4"></div>
+      <div class="circle 5"></div>
+      <div class="circle 6" style="margin-right: -6px;"></div>
+    </div>
+    <div class="selectors-wrapper" {% if is_paid_game %}hidden="true"{% endif %}>
+      {% for color in game.available_colors.all %}
+      <div class="selector" style="background-color: #{{ color.hex_code }}"></div>
+      {% endfor %}
+    </div>
+    <div class="state_off click2show" {% if not is_paid_game %}hidden="true"{% endif %}>
+      PAYMENT REGISTERED
+    </div>
+    <div class="state_off payment_advise" {% if not is_paid_game %}hidden="true"{% endif %}>
+      CLICK TO SHOW A SEQUENCE
+    </div>
+    <div class="go-wrapper" >
+      <form class ="paypal_form" action="." method="post"
+          {% if is_paid_game %}hidden="true"{% endif %}>
+        <input type="email" class="paypal" placeholder="PayPal account: to receive your prize">
+        <div class="price" hidden="true">Total: ${{ game.base_payment }}</div>
+        <input type="button" class="go" value="GO">
+      </form>
+      <form class="paypal_form paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr"
+          method="post" target="_top" {% if is_paid_game %}hidden="true"{% endif %}>
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="payment@circles.com">
+        <input type="hidden" name="lc" value="PE">
+        <input type="hidden" name="item_name" value="sequences">
+        <input type="hidden" name="amount" value="{{ game.base_payment }}">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="button_subtype" value="services">
+        <input type="hidden" name="no_note" value="1">
+        <input type="hidden" name="no_shipping" value="2">
+        <input type="hidden" name="quantity" value="1">
+        <input type="hidden" name="rm" value="1">
+        <input type="hidden" name="return" value="http://127.0.0.1:8000/games/{{game.pk}}">
+        <input type="hidden" name="custom" value="game_id={{ game.pk }}">
+        <input type="hidden" name="cancel_return" value="http://127.0.0.1:8000/games/{{game.id}}">
+        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
+      </form>
+    </div>
+  </div>
